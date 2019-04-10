@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>com.refactormyself.open</id>
     <name>Stack Exchange Plug In</name>
-    <version>0.001</version>
-    <vendor email="@refactormyself" url="http://www.refactormyself.com">refactormyself</vendor>
+    <version>0.0.1</version>
+    <vendor email="@refactormyself" url="http://www.refactormyself.com">Refactormyself</vendor>
 
     <description><![CDATA[
      Search Stack Exchange inside IntelliJ ...
@@ -25,7 +25,12 @@
         <!-- Add your extensions here -->
     </extensions>
 
+    <depends>com.intellij.modules.lang</depends>
     <actions>
+<!--        <group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu">-->
+<!--            <add-to-group group-id="MainMenu" anchor="last"/>-->
+<!--            <action id="Myplugin.Textboxes" class="com.refactormyself.open.HelloAction" text="Hello" description="Says hello"/>-->
+<!--        </group>-->
 
         <group id="SaheedPlugsIn.SampleMenu" text="SE" description="Stack Exchange menu">
             <add-to-group group-id="MainMenu" anchor="last"/>
@@ -34,7 +39,8 @@
                     text="Ask a Question on Stack Exchange"
                     description="Ask a Question on Stack Exchange"/>
         </group>
-
+    </actions>
+</idea-plugin>
 <!--        &lt;!&ndash; Add Ask question action to Tools Menu &ndash;&gt;-->
 <!--        &lt;!&ndash; icon="se-icon-16x16.jpg"&ndash;&gt;-->
 <!--        <action id="StackOverflow.AskQuestion.ToolsMenu"-->
@@ -59,5 +65,3 @@
 <!--                description="Search on Stack Exchange">-->
 <!--            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="last"/>-->
 <!--        </action>-->
-    </actions>
-</idea-plugin>
